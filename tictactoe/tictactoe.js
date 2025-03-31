@@ -12,7 +12,7 @@ const winConditions = [
     [2,4,6],
 ];
 let options = ["","","","","","","","",""];
-let cur = "X";
+let currentPlayer = "X";
 let running = false;
 initGame();
 function initGame(){
