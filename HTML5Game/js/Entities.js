@@ -2,7 +2,7 @@
         Img.bullet = new Image();
         Img.bullet.src = 'images/bullet2.png';
         Img.eBullet = new Image();
-        Img.eBullet.src = 'images/evilBullet2.png';
+        Img.eBullet.src = 'images/EvilBullet2.png';
         Img.hero = new Image();
         Img.hero.src = 'images/hero2.png';
         Img.enemy = new Image();
@@ -274,4 +274,5 @@
             && rect2.x <= rect1.x+rect1.width
             && rect1.y <= rect2.y + rect2.height
             && rect2.y <= rect1.y + rect1.height;
+
         }
