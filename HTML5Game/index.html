@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game</title>
+    </head>
+    <body>
+        <canvas id="ctx" width="1250" height="750" style="border:1px solid #000000;"></canvas> <!--Makes a box on the screen-->
+    </body>
+    <script src="js/Entities.js"></script>
+    <script>
+        /*
+        How to load image: 
+        var img = new Image();
+        img.src = "images/bullet.png";
+        How to display image:
+        ctx.drawImage(img,x,y);
+
+        */
+        var timeStart = Date.now(); //Return the time in ms
+        var frameCount = 0;
+        var timeSurived = 0;
+        var playing = false;
+        var pause = 0;
+        var unpause = 0;
+        var enemySpawnTimers = 100;
+        var enemyList = {};
+        var upgradeList = {};
+        var bulletList = {};
+        var ctx = document.getElementById('ctx').getContext("2d"); //Take HTML code and assign it to a javascript variable
+        //Modify Settings
+        ctx.font = '40px Arial'; //Change Font
+        ctx.fillStyle = 'black'; //Color of the text and forms
+        ctx.globalAplha = 0.5; //Transparency 0 = invisible, 1 = visible
+
+        //Draw Something()
+        //ctx.fillText('Hello',0,100); //Write texts at this location (written word, x, y)
+        //ctx.fillRect(50,50,100,100); //Draw a rectangle at these coords (startX,startY, width, height)
+        //ctx.clearRect(75, 75, 75, 75); //Clear a retangle at these coords (Removes anything within the rectangle) (startX, startY, width, height)
+        //Canvas Dimensions
+        var HEIGHT = document.getElementById('ctx').height;
+        var WIDTH = document.getElementById('ctx').width;
+        score = 0;
+        ctx.fillText("Press 'ESC' to start", WIDTH/4, HEIGHT/3)
+        document.onmousemove = function(mouse) {
+            var mouseX = mouse.clientX - document.getElementById('ctx').getBoundingClientRect().left; //8
+            var mouseY = mouse.clientY - document.getElementById('ctx').getBoundingClientRect().top; //8
+            mouseX -= player.x;
+            mouseY -= player.y;
+            player.aimAngle = Math.atan2(mouseY, mouseX) / Math.PI * 180;
+        }
+        document.onclick = function() {
+            //console.log('left click');
+            player.performAttack();
+        }
+        document.oncontextmenu = function(event) { //on right click
+            //console.log('rightclick');
+            player.superShoot()
+            event.preventDefault();
+        }
+        document.onkeydown = function(event) {
+            var x = event.keyCode
+            if (x === 87) {
+                player.up = true;
+            }
+            else if (x === 68) {
+                player.right = true;
+            }
+            else if (x === 83) {
+                player.down = true;
+            }
+            else if (x === 65) {
+                player.left = true;
+            }
+            else if (x === 32) {
+                shoot();
+            }
+            else if (x === 66) {
+                superShoot();
+            }
+            else if ((x === 27) && (playing === true)){
+                playing = false;
+                pause = Date.now();
+            }
+            else if ((x === 27) && (playing === false)){
+                playing = true;
+                unpause = Date.now();
+                timeStart += unpause - pause;
+            }
+        }
+        document.onkeyup = function(event) {
+            var x = event.keyCode
+            if (x === 87) {
+                player.up = false;
+            }
+            else if (x === 68) {
+                player.right = false;
+            }
+            else if (x === 83) {
+                player.down = false;
+            }
+            else if (x === 65) {
+                player.left = false;
+            }
+        }
+
+        update = function() {
+            console.log
+            ctx.clearRect(0,0, WIDTH, HEIGHT);
+            frameCount++;
+            score++;
+            immunity--;
+            enemySpawnTimers = Math.round(100 * ((100-(3*player.atkSpd+1))/100));
+            if (frameCount%enemySpawnTimers === 0) {
+                randomlyGenerateEnemy();
+            }
+            if (frameCount%75 === 0) {
+                randomlyGenerateUpgrade();
+            }
+            for (var key in bulletList) {
+                bulletList[key].update();
+            }
+            for (var key in upgradeList) {
+                upgradeList[key].update();
+            }
+            for (var key in enemyList) {
+                enemyList[key].update();
+            }
+            player.update();
+            ctx.fillText(player.hp + " hp", 50, 50);
+            ctx.fillText(score, 200, 50);
+        }
+        play = function() {
+            if (playing === true) {
+                update();
+            }
+        }
+        NewGame = function() {
+            timeStart = Date.now();
+            pause = Date.now();
+            player.hp = 10;
+            player.atkSpd = 1;
+            player.x = 50;
+            player.y = 50;
+            frameCount = 0;
+            player.atkCounter = 0;
+            player.superCounter = 0;
+            enemySpawnTimers = 100;
+            enemyList = {};
+            upgradeList = {};
+            bulletList = {}
+            score = 0;
+            randomlyGenerateEnemy();
+            randomlyGenerateEnemy();
+            randomlyGenerateEnemy();
+        }
+        createPlayer();
+        NewGame();
+        setInterval(play, 40); //Do a function and wait an amount of time
+    </script>
+</html>
