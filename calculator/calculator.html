@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <a href="./../src/index2.html">Page 1</a>
+        <table width="50%">
+            <tr>
+                <td><input autocomplete="off" autofocus name="num1" placeholder="Number1" type="text" id="num1"></td>
+                <td>
+                <select name="ops" id="ops">
+                    <option value="+"> <strong>+</strong> </option>
+                    <option value="-"> <strong>-</strong> </option>
+                    <option value="*"> <strong>*</strong> </option>
+                    <option value="/"> <strong>/</strong> </option>
+                    <option value="%"> <strong>%</strong> </option>
+                    </select>
+                </td>
+                <td><input autocomplete="off" autofocus name="num2" placeholder="Number2" type="text" id="num2"></td>
+                <td><button onclick="Calculate();">Calculate</button></td>
+                <td><p id="ans">Answer</p></td>
+            </tr>
+        </table>
+        <script>
+            function add(a, b) {
+                return a + b;
+            }
+            function min(a, b) {
+                return a - b;
+            }
+            function mult(a, b) {
+                return a * b;
+            }
+            function div(a, b) {
+                if (b == 0) {
+                    return "ValueError: Cannot divide by 0";
+                }
+                return a / b;
+            }
+            function rem(a, b){
+                if (b == 0) {
+                    return "ValueError: Cannot divide by 0";
+                }
+                return a % b;
+            }
+            function Calculate() {
+                var num1 = document.getElementById("num1");
+                var num2 = document.getElementById("num2");
+                var ops = document.getElementById("ops");
+                var ans = document.getElementById("ans");
+                var op = ops.options[ops.selectedIndex].text;
+                var answer = "";
+                num1 = Number(num1.value);
+                num2 = Number(num2.value);
+                switch (op) {
+                    case "+":
+                        answer = add(num1, num2);
+                        break;
+                    case "-":
+                        answer = min(num1, num2);
+                        break;
+                    case "*":
+                        answer = mult(num1, num2);
+                        break;
+                    case "/":
+                        answer = div(num1, num2);
+                        break;
+                    case "%":
+                        answer = rem(num1, num2);
+                        break;
+                }
+                ans.innerText = answer;
+            }
+        </script>
+        </body>
+</html>
