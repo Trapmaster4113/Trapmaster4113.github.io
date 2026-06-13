@@ -1,0 +1,113 @@
+body {
+    background-color: darkgray;
+}
+.rule {
+    background-color: #0400C8;
+    color: white;
+    font-size: 35px;
+    width: 90%;
+    height:75%;
+}
+#header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* match number of categories */
+    text-align: center;
+    gap: 5px;
+    padding-left: 5%;   /* Internal left margin */
+    padding-right: 5%;  /* Internal right margin */
+}
+.categoryCell {
+    background-color: #0400C8; /* Jeopardy blue */
+    color: white;
+    font-weight: bold;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+#game-board{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    padding-left: 5%;   /* Internal left margin */
+    padding-right: 5%;  /* Internal right margin */
+}
+.cell {
+    background-color: #0400C8; /* Jeopardy blue */
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+.cell:disabled {
+    background-color: #1a1a4e; /* darker when clicked */
+    color: gray;
+    cursor: not-allowed;
+}
+.popup {
+    background-color: #0400C8;
+    width: 90%;
+    height:75%;
+}
+.popup p {
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.daily-double {
+    background-color: darkred;
+}
+
+.daily-double p, .daily-double button {
+    background-color: transparent; /* prevents * or button defaults from overriding */
+}
+.popup button {
+    background-color: darkgray;
+    color: white;
+    font-size: 25px;
+    width:20%;
+    height:20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+#teams {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    padding-left: 5%;   /* Internal left margin */
+    padding-right: 5%;  /* Internal right margin */
+}
+
+.teamCell {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.teamCell p {
+    margin: 0; /* <p> has default top/bottom margin that pushes it out of alignment */
+    font-weight: bold;
+}
+
+.teamCell input {
+    width: 60px;
+    font-weight: bold;
+}

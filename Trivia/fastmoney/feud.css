@@ -1,0 +1,16 @@
+.teams{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding-left: 5%;   /* Internal left margin */
+    padding-right: 5%;  /* Internal right margin */
+}
+.table {
+    font-weight: bold;
+    border: 2px solid #000;
+    font-size: 20px;
+    cursor: pointer;
+}
+#answers {
+    display:flex;
+}

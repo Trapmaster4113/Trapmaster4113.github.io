@@ -1,0 +1,12 @@
+Regular Jeopardy Rules:
+ - Most points win
+ - Wrong answers loses points
+ - Right answers wins points
+ - Team who buzzes first gets to answer
+ - Teams who buzz must answer within 5 seconds
+Special Rules:
+ - The first person to get a question wrong will get to pick the next category unless someone after gets the question right
+ - Multiple Daily Doubles
+ - Teams may spend 50% of the points a question is worth to force an opponent to answer
+ - 1 Phone call per team
+ - Teams may answer a question multiple times if no other team wants to attempt
