@@ -34,6 +34,13 @@ category("Shitsville", [
     question(400, "This great one once said 'you miss 100% of the shots you don't take", "Wayne Gretzky", false),
     question(500, "Voted as the Greatest Canadian, he and his cabinet brought forth North America's first single-payer universal health care program", "Tommy Douglas", false),
 ]),
+category("Acapella", [
+    question(100, "./audio/badguy.mp3", "Bad Guy - Billie Eillish", false, 'audio'),
+    question(200, "./audio/brightside.mp3", "Mr. Brightside - The Killers", false, 'audio'),
+    question(300, "./audio/imissyou.mp3", "I Miss You - Blink182", false, 'audio'),
+    question(400, "./audio/stickseason.mp3", "Stick Season - Noah Kahan", false, 'audio'),
+    question(500, "./audio/demons.mp3", "Demons - Imagine Dragons", false, 'audio'),
+]),
 ];
 var questions = [
     category("Math",[
