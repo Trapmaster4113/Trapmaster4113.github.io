@@ -18,47 +18,47 @@ category = function(name, qs) {
 }
 var lastQuestion = 0;
 var questions = [
-    category("Math",[
-    question(100, "2+2", "4", false),
-    question(200, "What's the top part of a fraction called?", "numerator", false),
-    question(300, "16x16", "256", false),
-    question(400, "How many prime numbers are between 0 and 20 (inclusive)?", "8", false),
-    question(500, "Derive: (6x*3)^2+4", "72x+36", false),
+    category("February",[
+    question(100, "This is her bus seat", "Rosa Parks", false),
+    question(200, "A vocal civil rights leader preaching for African Americans to fight back against oppression", "Malcolm X", false),
+    question(300, "This was the day that the 13th Amendment of the US Constitution was ratified", "Dec. 6 1865", true),
+    question(400, "An escaped slave who taught himself how to read and write, and ended up becoming a massive figure in the abolitionist movement writing 3 books about his life", "Frederick Douglass", false),
+    question(500, "The first Black student to attend an all white school in New Orleans, Louisiana", "Ruby Bridges", false),
 ]),
-    category("Science",[
-    question(100, "What is the freezing point of Water in fahrenheit", "32", false),
-    question(200, "What is the 5th planet from the sun", "Jupiter", false),
-    question(300, "Other than Chloroplast, what organelle does a plant cell have that an animal cell doesn't", "Cell wall", false),
-    question(400, "What is the 4th noble gas?", "Krypton", false),
-    question(500, "placeholder", "placeholder", false),
+category("March", [
+    question(100, "The notorious R.B.G spent her days on the supreme court and became one of the first women to lay in state at the Capitol", "Ruth Bader Ginsburg", false),
+    question(200, "Broke countless aviation records and became one of the first female pilots to solo fly across the Atlantic", "Amelia Earhart", false),
+    question(300, "Popularized during the 1940s, this icon help push women into the workforce","Rosie the Riveter", false),
+    question(400, "'Keep your face to the sunshine and you cannot see a shadow' quoted from someone whose only sense was justice ", "Helen Keller", false),
+    question(500, "With a baby on her back, while still a teenager, she pioneered across the unexplored American wilderness in the 1800s", "Sacagawea", false),
 ]),
-    category("Literature",[
-    question(100, "placeholder", "placeholder", false),
-    question(200, "placeholder", "placeholder", false),
-    question(300, "placeholder", "placeholder", false),
-    question(400, "placeholder", "placeholder", false),
-    question(500, 'What book starts with "Call me Ishmaul"', "Moby Dick", false),
+category("May", [
+    question(100, "The first Asian American to serve as the Vice President of the United States", "Kamala Harris", false),
+    question(200, "This Doctor turned Actor hosts the Mask Singer", "Ken Jeong", false),
+    question(300, "American born, this fighter brought chinese martial arts into western media", "Bruce Lee", false),
+    question(400, "Doubted due to his race, this not-even bench warmer finally got his chance and dropped 38 on Kobe Bryant", "Jeremy Lin", true),
+    question(500, "Flipping the script, this actor became one of the first Asian Americans to play a major non-stereotyped role on Star Trek: The Original Series", "George Takei", false),
 ]),
-    category("History",[
-    question(100, "placeholder", "placeholder", false),
-    question(200, "placeholder", "placeholder", false),
-    question(300, "placeholder", "placeholder", false),
-    question(400, "placeholder", "placeholder", false),
-    question(500, "placeholder", "placeholder", false),
+category("June", [
+    question(100, "The singing king in Queen", "Freddie Mercury", false),
+    question(200, "This American singer/songwriter took the United States by storm topping the US Billboard Hot 100 at #4 with 'Good Luck Babe'", "Chappell Roan", false),
+    question(300, "Mathematician, Computer Scientist, War Hero: What can't this english puzzle solver do?", "Alan Turing", false),
+    question(400, "Known for his unequaled diplomacy, this 19th century prussian leader is credited with the unification of Germany", "Frederick the Great", false),
+    question(500, "The first acknowledged gay and female american to launch into space", "Sally Ride", false),
 ]),
-    category("Geography",[
-    question(100, "placeholder", "placeholder", false),
-    question(200, "placeholder", "placeholder", false),
-    question(300, "placeholder", "placeholder", false),
-    question(400, "placeholder", "placeholder", false),
-    question(500, "placeholder", "placeholder", false),
+category("Shitsville", [
+    question(100, "What's the capital of Canada?", "Ottawa", false),
+    question(200, "Known for doing black face and also served time as the leader of a minor power in the world", "Justin Trudeau", false),
+    question(300, "This structure stood unrivaled as the tallest freestanding structure in the world for over 3 decades", "The CN Tower", false),
+    question(400, "This great one once said 'you miss 100% of the shots you don't take", "Wayne Gretzky", false),
+    question(500, "Voted as the Greatest Canadian, he and his cabinet brought forth North America's first single-payer universal health care program", "Tommy Douglas", false),
 ]),
-    category("Gaming",[
-    question(100, "placeholder", "placeholder", false),
-    question(200, "placeholder", "placeholder", false),
-    question(300, "placeholder", "placeholder", false),
-    question(400, "placeholder", "placeholder", false),
-    question(500, "placeholder", "placeholder", false),
+category("Acapella", [
+    question(100, "./audio/badguy.mp3", "Bad Guy - Billie Eillish", false, 'audio'),
+    question(200, "./audio/brightside.mp3", "Mr. Brightside - The Killers", false, 'audio'),
+    question(300, "./audio/imissyou.mp3", "I Miss You - Blink182", false, 'audio'),
+    question(400, "./audio/stickseason.mp3", "Stick Season - Noah Kahan", false, 'audio'),
+    question(500, "./audio/demons.mp3", "Demons - Imagine Dragons", false, 'audio'),
 ]),
 ];
 var gameBoard = document.getElementById("game-board");
