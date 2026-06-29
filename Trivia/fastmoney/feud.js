@@ -1,10 +1,10 @@
 var questions = [
-    "What's the worst month: ",
-    "What age were you when you first drove a car?",
-    "What's the most popular video game?",
-    "What's your favorite Olympic sport?",
-    "What character do you play in Mario Kart?",
-    "What's your go to breakfast?",
+    'Name a country in Asia: ',
+    'At what age do you consider someone is old: ',
+    'Minimum height to be considered tall: ',
+    'Favorite Color in ROYGBV: ',
+    'Honestly: what do you think your IQ is: ',
+    'What activity do you do before bed',
 ];
 var teamInput = document.getElementById("teamNum");
 const teamsButton = document.getElementById("enterTeams");
