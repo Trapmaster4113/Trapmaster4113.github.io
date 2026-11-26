@@ -86,3 +86,40 @@ var questions = [
     question(500, "BabaYetu.m4a", "Baba Yetu - Christopher Tin", false),
 ]),
 ];
+var questions = [
+    category("Christmas",[
+    question(100, "In the 19th century, a popular folktale came about where misbehaving kids would get this rock in lieu of presents", "Coal", false),
+    question(200, "This high hanging plant makes people fall in love", "Mistletoe", false),
+    question(300, "How many reindeer are mentioned in the Rudolph song?", "9", false),
+    question(400, "Officially recognized by this Nordic Country, Santa Claus lives in this country", "Finland", false),
+    question(500, "How old is Santa Claus?", "1750ish", false),
+]),
+    category("Earth Day",[
+    question(100, "This is the longest river in the world", "The Nile River", false),
+    question(200, "Seen in the Arctic Sky, this natural wonder dazzles spectators with northern lights", "Aurora Borealis", false),
+    question(300, "Down under, this sea forest is actively getting destroyed by climate change", "Great Barrier Reef", false),
+    question(400, "After Mount Everest, this is the next tallest mountain", "K2", false),
+    question(500, "This politician is credited for founding Earth Day", "Gaylord Nelson", false),
+]),
+    category("Halloween",[
+    question(100, "This movie depicts a skeleton trying to reinvigorate joy for his favorite holiday by stealing ideas from another", "Nightmare before Christmas", false),
+    question(200, "This candy was made to feed troops during WW2, but has also become a household name and a rapper’s tag", "M&Ms", false),
+    question(300, "Stingy Jack is folklore originating in Ireland, who has this as his head", "Jack o Lantern", false),
+    question(400, "This is the most popular Halloween candy in America", "Reeses", false),
+    question(500, 'During the movie E.T., the alien is lured out using this candy', "Reese’s Pieces", false),
+]),
+    category("Thanksgiving",[
+    question(100, "Nothing is more American than this Holiday and its classic American dessert", "Apple Pie", false),
+    question(200, "This berry is used to make red sauce eaten with Turkey", "Cranberry", false),
+    question(300, "This is the boat the pilgrims rode on", "Mayflower", false),
+    question(400, "This technique uses oil or butter spooned onto a turkey to make the skin crispy", "Basting", false),
+    question(500, "This is when Canadian Thanksgiving is celebrated", "2nd Monday of October", false),
+]),
+    category("Random Days",[
+    question(100, "Celebrated on the 3rd Monday of January, it marks the end of winter vacation right before the start of the college spring semester", "MLK Jr. Day", false),
+    question(200, "Widely known by nerds, this day is celebrated on March 14th", "Pie Day", false),
+    question(300, "This Hispanic holiday is celebrated to honor the dead", "Cinco De Mayo", false),
+    question(400, "This is when International Women's Day is", "March 8th", false),
+    question(500, "This is when International Men's Day is", "November 19th", false),
+]),
+];
